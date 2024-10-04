@@ -2,20 +2,19 @@ import java.util.Scanner;
 public class Pemilihan2Percobaan2_14 {
     public static void main(String[] args) {
         Scanner input14 = new Scanner(System.in);
-        int menu;
-        String member;
+
+        String menu, member;
         double harga = 0, total_bayar, diskon = 0;
 
-        System.out.println("-------------------------");
-        System.out.println("===== MENU KAFE JTI =====");
-        System.out.println("-------------------------");
-        System.out.println("1. Ricebowl");
-        System.out.println("2. Ice Tea");
-        System.out.println("3. Paket bunding (Ricebowl + Ice Tea)");
         System.out.println("-------------------------------------");
-        System.out.print("masukkan angka dari menu yang dipilih = ");
-        menu = input14.nextInt();
-        input14.nextLine();
+        System.out.println("=========== MENU KAFE JTI ===========");    
+        System.out.println("-------------------------------------");
+        System.out.println("1. Kopi                            --");
+        System.out.println("2. Teh                             --");
+        System.out.println("3. Roti                            --");
+        System.out.println("-------------------------------------");
+        System.out.print("Masukkan menu yang dipilih = ");
+        menu = input14.nextLine();
         System.out.print("Apakah punya member (y/n) ? = ");
         member = input14.nextLine();
         System.out.println("-------------------------------------");
@@ -23,15 +22,17 @@ public class Pemilihan2Percobaan2_14 {
         if (member.equalsIgnoreCase("y")) {
             diskon = 0.10;
             System.out.println("Besar diskon = 10%");
-            if (menu == 1){
-                harga = 14000;
-                System.out.println("Harga ricebowl = " + harga);
+            if (menu.equalsIgnoreCase("Kopi")){
+                harga = 12000;
+                System.out.println("Harga Kopi = " + harga);
  
-            }else if (menu == 2) {
-                harga = 3000;
-                System.out.println("Harga ice tea = " + harga);
-            }else if (menu == 3) {
-                harga = 15000;
+            }else if (menu.equalsIgnoreCase("Teh")) {
+                harga = 70000;
+                System.out.println("Harga Teh = " + harga);
+            }else if (menu.equalsIgnoreCase("Roti")) {
+                harga = 20000;
+                System.out.println("Harga Roti = " + harga);
+
             }else {
                 System.out.println("Masukkan pilihan menu dengan benar");
                 return;
@@ -42,17 +43,17 @@ public class Pemilihan2Percobaan2_14 {
             System.out.println("-------------------------------------");}
 
             else if (member.equalsIgnoreCase("n")) {
-                if (menu == 1) {
-                    harga = 14000;
-                    System.out.println("Harga ricebowl = " + harga);
+                if (menu.equalsIgnoreCase("Kopi")) {
+                    harga = 12000;
+                    System.out.println("Harga Kopi = " + harga);
 
-                }else if (menu == 2) {
-                    harga = 3000;
-                    System.out.println("Harga ice tea = " + harga);
+                }else if (menu.equalsIgnoreCase("Teh")) {
+                    harga = 7000;
+                    System.out.println("Harga Teh = " + harga);
                     
-                }else if (menu == 3) {
-                    harga = 15000;
-                    System.out.println("Harga bundling = " + harga);
+                }else if (menu.equalsIgnoreCase("Roti")) {
+                    harga = 20000;
+                    System.out.println("Harga Roti = " + harga);
                      
                 }else {
                     System.out.println("Masukkan pilihan menu dengan benar");
